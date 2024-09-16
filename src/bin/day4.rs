@@ -9,7 +9,7 @@ fn main() {
         .map(|l| l.unwrap())
         .collect_vec();
     println!("Day 4, part 1: {}", part1(&input));
-    println!("Day 4, part 2: {}", part2());
+    println!("Day 4, part 2: {}", part2(&input));
 }
 
 fn part1(input: &[String]) -> i32 {
@@ -20,8 +20,15 @@ fn part1(input: &[String]) -> i32 {
         .map(|r| r.sector_id)
         .sum()
 }
-fn part2() -> i32 {
-    unimplemented!();
+fn part2(input: &[String]) -> i32 {
+    input
+        .iter()
+        .map(|s| s.parse::<Room>().unwrap())
+        .filter(|r| r.is_real())
+        .map(|r| (r.decrypt(), r.sector_id))
+        .find(|(s, _)| s.contains("northpole"))
+        .map(|(_, id)| id)
+        .unwrap()
 }
 
 #[derive(Debug, PartialEq)]
@@ -67,6 +74,21 @@ impl Room {
         let checksum: String = freq.iter().take(5).map(|(c, _)| *c).collect();
         checksum == self.checksum
     }
+
+    fn decrypt(&self) -> String {
+        let shift = (self.sector_id % 26) as u8;
+        self.name
+            .iter()
+            .map(|s| {
+                s.chars()
+                    .map(|c| {
+                        let c = (c as u8 - b'a' + shift) % 26 + b'a';
+                        c as char
+                    })
+                    .join("")
+            })
+            .join(" ")
+    }
 }
 
 #[cfg(test)]
@@ -107,5 +129,6 @@ mod tests {
         let input = std::fs::read_to_string("inputs/day4/input").unwrap();
         let input: Vec<String> = input.lines().map(ToString::to_string).collect();
         assert_eq!(158835, part1(&input));
+        assert_eq!(993, part2(&input));
     }
 }
