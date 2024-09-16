@@ -10,3 +10,4 @@ lto = true
 
 [dependencies]
 itertools = "0.13.0"
+md5 = "0.7.0"
