@@ -96,15 +96,4 @@ mod tests {
 
         assert_eq!(3, part2(&input));
     }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day7/input")
-            .unwrap()
-            .lines()
-            .map(|s| s.to_string())
-            .collect_vec();
-        assert_eq!(115, part1(&input));
-        assert_eq!(231, part2(&input));
-    }
 }

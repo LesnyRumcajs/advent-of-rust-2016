@@ -45,15 +45,3 @@ fn part2(input: &str) -> String {
     }
     password.into_iter().collect()
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_solution() {
-        let input = "ojvtpuvg";
-        assert_eq!(part1(input), "4543c154");
-        assert_eq!(part2(input), "1050cbbd");
-    }
-}

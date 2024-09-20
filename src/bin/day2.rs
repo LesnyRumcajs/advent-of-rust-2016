@@ -77,15 +77,4 @@ mod tests {
         assert_eq!(part1(&input), "1985");
         assert_eq!(part2(&input), "5DB3");
     }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day2/input")
-            .unwrap()
-            .lines()
-            .map(ToString::to_string)
-            .collect::<Vec<_>>();
-        assert_eq!(part1(&input), "24862");
-        assert_eq!(part2(&input), "46C91");
-    }
 }

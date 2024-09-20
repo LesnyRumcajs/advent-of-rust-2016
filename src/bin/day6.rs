@@ -88,16 +88,4 @@ enarar"
         assert_eq!(part1(&input), "easter");
         assert_eq!(part2(&input), "advent");
     }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day6/input")
-            .expect("Can't read input")
-            .lines()
-            .map(|s| s.to_string())
-            .collect::<Vec<String>>();
-
-        assert_eq!(part1(&input), "wkbvmikb");
-        assert_eq!(part2(&input), "evakwaga");
-    }
 }

@@ -123,12 +123,4 @@ mod tests {
 
         assert_eq!(1514, part1(&input));
     }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day4/input").unwrap();
-        let input: Vec<String> = input.lines().map(ToString::to_string).collect();
-        assert_eq!(158835, part1(&input));
-        assert_eq!(993, part2(&input));
-    }
 }

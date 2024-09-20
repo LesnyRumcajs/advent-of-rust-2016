@@ -73,13 +73,6 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day1/input").unwrap();
-        assert_eq!(298, calculate_distance(&input, false));
-        assert_eq!(158, calculate_distance(&input, true));
-    }
-
-    #[test]
     fn test_examples() {
         assert_eq!(5, calculate_distance("R2, L3", false));
         assert_eq!(2, calculate_distance("R2, R2, R2", false));

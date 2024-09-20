@@ -30,10 +30,9 @@ File.open("src/bin/day#{day_nr}.rs", 'w') do |f|
     #[cfg(test)]
     mod tests {
         use super::*;
-        use std::{fs::File, io::BufReader};
 
         #[test]
-        fn test_solution() {
+        fn test_examples() {
         }
     }
   HEREDOC
