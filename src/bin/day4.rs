@@ -8,8 +8,8 @@ fn main() {
         .lines()
         .map(|l| l.unwrap())
         .collect_vec();
-    println!("Day 4, part 1: {}", part1(&input));
-    println!("Day 4, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &[String]) -> i32 {
@@ -122,13 +122,5 @@ mod tests {
         .collect_vec();
 
         assert_eq!(1514, part1(&input));
-    }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day4/input").unwrap();
-        let input: Vec<String> = input.lines().map(ToString::to_string).collect();
-        assert_eq!(158835, part1(&input));
-        assert_eq!(993, part2(&input));
     }
 }

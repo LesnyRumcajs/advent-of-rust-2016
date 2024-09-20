@@ -24,8 +24,8 @@ fn main() {
         .lines()
         .map(|l| l.unwrap().parse::<Input>().unwrap())
         .collect::<Vec<_>>();
-    println!("Day 3, part 1: {}", part1(&input));
-    println!("Day 3, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(triangles: &[Input]) -> i32 {
@@ -95,16 +95,5 @@ mod tests {
         .map(|l| l.parse::<Input>().unwrap())
         .collect::<Vec<_>>();
         assert_eq!(part2(&input), 6);
-    }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day3/input")
-            .unwrap()
-            .lines()
-            .map(|l| l.parse::<Input>().unwrap())
-            .collect::<Vec<_>>();
-        assert_eq!(part1(&input), 982);
-        assert_eq!(part2(&input), 1826);
     }
 }

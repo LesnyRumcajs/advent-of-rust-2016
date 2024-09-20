@@ -21,8 +21,8 @@ fn main() {
         .lines()
         .map_while(Result::ok)
         .collect::<Vec<String>>();
-    println!("Day 6, part 1: {}", part1(&input));
-    println!("Day 6, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &[String]) -> String {
@@ -87,17 +87,5 @@ enarar"
             .collect::<Vec<String>>();
         assert_eq!(part1(&input), "easter");
         assert_eq!(part2(&input), "advent");
-    }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day6/input")
-            .expect("Can't read input")
-            .lines()
-            .map(|s| s.to_string())
-            .collect::<Vec<String>>();
-
-        assert_eq!(part1(&input), "wkbvmikb");
-        assert_eq!(part2(&input), "evakwaga");
     }
 }

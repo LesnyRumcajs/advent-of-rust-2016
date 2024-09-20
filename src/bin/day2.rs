@@ -6,8 +6,8 @@ fn main() {
         .lines()
         .map(Result::unwrap)
         .collect::<Vec<String>>();
-    println!("Day 2, part 1: {}", part1(&input));
-    println!("Day 2, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(instructions: &[String]) -> String {
@@ -76,16 +76,5 @@ mod tests {
             .collect::<Vec<_>>();
         assert_eq!(part1(&input), "1985");
         assert_eq!(part2(&input), "5DB3");
-    }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day2/input")
-            .unwrap()
-            .lines()
-            .map(ToString::to_string)
-            .collect::<Vec<_>>();
-        assert_eq!(part1(&input), "24862");
-        assert_eq!(part2(&input), "46C91");
     }
 }

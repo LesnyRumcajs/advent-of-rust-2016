@@ -9,8 +9,8 @@ fn main() {
         .lines()
         .map_while(Result::ok)
         .collect_vec();
-    println!("Day 7, part 1: {}", part1(&input));
-    println!("Day 7, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &[String]) -> i32 {
@@ -95,16 +95,5 @@ mod tests {
             .collect_vec();
 
         assert_eq!(3, part2(&input));
-    }
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day7/input")
-            .unwrap()
-            .lines()
-            .map(|s| s.to_string())
-            .collect_vec();
-        assert_eq!(115, part1(&input));
-        assert_eq!(231, part2(&input));
     }
 }

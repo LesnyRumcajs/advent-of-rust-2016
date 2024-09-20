@@ -3,8 +3,8 @@ use std::io::BufRead as _;
 fn main() {
     let input = std::io::stdin().lock().lines().next().unwrap().unwrap();
 
-    println!("Day 5, part 1: {}", part1(&input));
-    println!("Day 5, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &str) -> String {
@@ -44,16 +44,4 @@ fn part2(input: &str) -> String {
         }
     }
     password.into_iter().collect()
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_solution() {
-        let input = "ojvtpuvg";
-        assert_eq!(part1(input), "4543c154");
-        assert_eq!(part2(input), "1050cbbd");
-    }
 }

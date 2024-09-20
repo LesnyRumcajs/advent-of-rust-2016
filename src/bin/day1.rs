@@ -2,8 +2,8 @@ use std::{collections::HashSet, f32::consts::PI, io::BufRead as _, ops::ControlF
 
 fn main() {
     let input = std::io::stdin().lock().lines().next().unwrap().unwrap();
-    println!("Day 1, part 1: {}", part1(&input));
-    println!("Day 1, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &str) -> i32 {
@@ -71,13 +71,6 @@ fn calculate_distance(input: &str, short_circuit: bool) -> i32 {
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    #[test]
-    fn test_solution() {
-        let input = std::fs::read_to_string("inputs/day1/input").unwrap();
-        assert_eq!(298, calculate_distance(&input, false));
-        assert_eq!(158, calculate_distance(&input, true));
-    }
 
     #[test]
     fn test_examples() {
