@@ -16,8 +16,8 @@ puts 'Creating scaffold Rust file...'
 File.open("src/bin/day#{day_nr}.rs", 'w') do |f|
   f << <<~HEREDOC
     fn main() {
-        println!("Day #{day_nr}, part 1: {}", part1());
-        println!("Day #{day_nr}, part 2: {}", part2());
+        println!("{}", part1());
+        println!("{}", part2());
     }
 
     fn part1() -> i32 {

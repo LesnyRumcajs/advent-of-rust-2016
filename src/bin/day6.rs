@@ -21,8 +21,8 @@ fn main() {
         .lines()
         .map_while(Result::ok)
         .collect::<Vec<String>>();
-    println!("Day 6, part 1: {}", part1(&input));
-    println!("Day 6, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &[String]) -> String {

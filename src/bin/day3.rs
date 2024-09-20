@@ -24,8 +24,8 @@ fn main() {
         .lines()
         .map(|l| l.unwrap().parse::<Input>().unwrap())
         .collect::<Vec<_>>();
-    println!("Day 3, part 1: {}", part1(&input));
-    println!("Day 3, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(triangles: &[Input]) -> i32 {

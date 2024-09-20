@@ -3,8 +3,8 @@ use std::io::BufRead as _;
 fn main() {
     let input = std::io::stdin().lock().lines().next().unwrap().unwrap();
 
-    println!("Day 5, part 1: {}", part1(&input));
-    println!("Day 5, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &str) -> String {

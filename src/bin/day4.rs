@@ -8,8 +8,8 @@ fn main() {
         .lines()
         .map(|l| l.unwrap())
         .collect_vec();
-    println!("Day 4, part 1: {}", part1(&input));
-    println!("Day 4, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &[String]) -> i32 {

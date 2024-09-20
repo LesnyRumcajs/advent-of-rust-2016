@@ -2,8 +2,8 @@ use std::{collections::HashSet, f32::consts::PI, io::BufRead as _, ops::ControlF
 
 fn main() {
     let input = std::io::stdin().lock().lines().next().unwrap().unwrap();
-    println!("Day 1, part 1: {}", part1(&input));
-    println!("Day 1, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &str) -> i32 {

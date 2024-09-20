@@ -6,8 +6,8 @@ fn main() {
         .lines()
         .map(Result::unwrap)
         .collect::<Vec<String>>();
-    println!("Day 2, part 1: {}", part1(&input));
-    println!("Day 2, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(instructions: &[String]) -> String {

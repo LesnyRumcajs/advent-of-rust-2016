@@ -9,8 +9,8 @@ fn main() {
         .lines()
         .map_while(Result::ok)
         .collect_vec();
-    println!("Day 7, part 1: {}", part1(&input));
-    println!("Day 7, part 2: {}", part2(&input));
+    println!("{}", part1(&input));
+    println!("{}", part2(&input));
 }
 
 fn part1(input: &[String]) -> i32 {
